@@ -2,15 +2,16 @@ let humanScore = 0;
 let computerScore = 0;
 let currentRoundNumber = 1;
 
-// Write your code below:
 
+// This function will generate a random secret number at the the start of a new game
 const generateTarget = () => {
     return Math.floor(Math.random() * 9) + 1;
 }
 
-const compareGuesses = (hGuess, cGuess, sgTarget) => {
-    let humanDiffernce = Math.abs(hGuess - sgTarget);
-    let computerDifference = Math.abs(cGuess - sgTarget);
+// This function will compare which player's guess was the closest
+let compareGuesses = (humanGuess, computerGuess, targetGuess) => {
+    let humanDiffernce = Math.abs(humanGuess - targetGuess);
+    let computerDifference = Math.abs(computerGuess - targetGuess);
 
     if (humanDiffernce < computerDifference || humanDiffernce == computerDifference){
         return true;
@@ -20,8 +21,14 @@ const compareGuesses = (hGuess, cGuess, sgTarget) => {
     
 }
 
-const updateScore = () =>{
+// This function will update the score of the winner
+// const updateScore = () =>{
     
+// }
+
+// This function will update the round 
+let advanceRound = (currentRoundNumber) => {
+    currentRoundNumber++;
 }
 
 
